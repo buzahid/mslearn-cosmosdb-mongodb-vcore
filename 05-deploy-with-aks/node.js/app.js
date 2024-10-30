@@ -15,27 +15,12 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get('/getOptions', (req, res) => {
-    const options = data.getOptions();
-    res.json(options);
-});
-
-app.get('/doVectorSearch', (req, res) => {
-    const query = req.query.q;
-    const result = data.doVectorSearch(query);
-    res.json(result);
-});
-
-app.get('/doGPTSearch', (req, res) => {
-    const query = req.query.q;
-    const result = data.doGPTSearch(query);
-    res.json(result);
-});
+// TODO: Extend the application code
 
 app.get('/submitOption', async (req, res) => {
     try {
         const query = req.query.o;
-        
+
         if (query === '1' || query === '2') {
             
             console.log("Starting long-running operation for query:", query);

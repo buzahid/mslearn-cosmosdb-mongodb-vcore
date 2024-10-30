@@ -148,4 +148,4 @@ async function doVectorSearch(userInput) {
     }
 }
 
-module.exports = { getOptions, processOption, doGPTSearch, doVectorSearch };
+// TODO: Export functions

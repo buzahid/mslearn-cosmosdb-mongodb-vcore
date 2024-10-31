@@ -40,7 +40,7 @@ param (
 )
 
 # Determine the .env file path
-$envFilePath = "./.env"
+$envFilePath = "./node.js/.env"
 
 # Read the .env file
 $envFileContent = Get-Content -Path $envFilePath
